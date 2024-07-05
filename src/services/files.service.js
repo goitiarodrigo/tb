@@ -1,17 +1,13 @@
 import axios from 'axios';
 import { processCsv } from '../utils/csv.utils.js';
-import dotenv from 'dotenv';
-
-dotenv.config();
+import { EXTERNAL_BASE_URL, TOKEN } from '../../constants.js';
 
 const headers = {
     headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.TOKEN}`,
+        Authorization: `Bearer ${TOKEN}`,
     },
 };
-
-const { EXTERNAL_BASE_URL } = process.env;
 
 export const filesServices = {
     getFiles: async () => {

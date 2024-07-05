@@ -5,7 +5,6 @@ export const filesControllers = {
         try {
             let response;
             const { fileName } = req.query;
-
             if (!fileName) {
                 const files = await filesServices.getFiles();
 

@@ -5,7 +5,7 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "test": "npm test",
+        "test": "mocha",
         "start:dev": "nodemon src/index.js",
         "start": "node src/index.js",
         "prepare": "husky install",
@@ -34,9 +34,13 @@
         "express": "^4.19.2",
         "husky": "7",
         "morgan": "^1.10.0",
-        "prettier": "^3.3.2"
+        "prettier": "^3.3.2",
+        "sinon": "^18.0.0"
     },
     "devDependencies": {
+        "chai": "^5.1.1",
+        "chai-http": "^5.0.0",
+        "mocha": "^10.6.0",
         "nodemon": "^3.1.4"
     }
 }

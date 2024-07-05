@@ -62,5 +62,9 @@ const dataValidator = (data) => {
         (key) => data.hasOwnProperty(key) && data[key].length > 0,
     );
 
+    if (!isValid) return false;
+
+    if (isNaN(data.number)) return false;
+
     return isValid;
 };
