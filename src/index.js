@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-app.use('/files', router)
+app.use('/files', router);
 
 const PORT = process.env.PORT || 3080;
 

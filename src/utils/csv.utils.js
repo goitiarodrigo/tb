@@ -1,20 +1,21 @@
 import csvParser from 'csv-parser';
-import { Readable } from 'stream'
+import { Readable } from 'stream';
 
 /**
  * Process csv file and return data as array of objects
  * @param  {} csvData
  * @returns ArrayList
- * 
-*/
+ *
+ */
 export const processCsv = async (csvData) => {
-    let file = "";
+    let file = '';
     let lines = [];
     let finalResult = {};
 
     return new Promise((resolve, reject) => {
         const stream = Readable.from(csvData);
-        stream.pipe(csvParser())
+        stream
+            .pipe(csvParser())
             .on('data', (data) => {
                 const isValid = dataValidator(data);
                 if (isValid) {
@@ -34,34 +35,32 @@ export const processCsv = async (csvData) => {
     });
 };
 
-
 /**
  * Return new object from csv data
- * @param csvData 
+ * @param csvData
  * @returns newObject
  */
 const transformCsvData = (csvData) => {
     const newObject = {
         text: csvData.text,
         number: csvData.number,
-        hex: csvData.hex
-    }
+        hex: csvData.hex,
+    };
 
     return newObject;
-}
-
+};
 
 /**
  * Return boolean if datarow is valid
- * @param {row} data 
+ * @param {row} data
  * @returns boolean
  */
 const dataValidator = (data) => {
     const requiredProperties = ['file', 'text', 'number', 'hex'];
-    
-    const isValid = requiredProperties.every(key => 
-        data.hasOwnProperty(key) && data[key].length > 0
+
+    const isValid = requiredProperties.every(
+        (key) => data.hasOwnProperty(key) && data[key].length > 0,
     );
 
     return isValid;
-}
+};
