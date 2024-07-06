@@ -1,4 +1,4 @@
-FROM node:14.8.0-slim
+FROM node:14.21.3
 
 WORKDIR /usr/src/app
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD ["node", "src/index.js"]
