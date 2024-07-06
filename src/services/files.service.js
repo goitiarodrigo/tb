@@ -22,7 +22,6 @@ export const filesServices = {
                 throw new Error('Error to get file list');
             }
         } catch (error) {
-            console.log(error);
             throw new Error('Error to get file list: ', error.message);
         }
     },
@@ -83,7 +82,6 @@ export const filesServices = {
 
             return successfulResults;
         } catch (error) {
-            console.log(error);
             throw new Error('Error to process csv file: ', error.message);
         }
     },

@@ -40,7 +40,7 @@ export const processCsv = async (csvData) => {
  * @param csvData
  * @returns newObject
  */
-const transformCsvData = (csvData) => {
+export const transformCsvData = (csvData) => {
     const newObject = {
         text: csvData.text,
         number: csvData.number,
@@ -55,7 +55,7 @@ const transformCsvData = (csvData) => {
  * @param {row} data
  * @returns boolean
  */
-const dataValidator = (data) => {
+export const dataValidator = (data) => {
     const requiredProperties = ['file', 'text', 'number', 'hex'];
 
     const isValid = requiredProperties.every(
