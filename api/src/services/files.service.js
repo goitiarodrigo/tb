@@ -20,7 +20,9 @@ export const filesServices = {
         try {
             const promises = files.map(async (file) => {
                 try {
-                    const response = await axiosInstance.axiosBase.get(`/file/${file}`);
+                    const response = await axiosInstance.axiosBase.get(
+                        `/file/${file}`,
+                    );
                     if (response.status !== 200) {
                         throw new Error(
                             `Error to get file: ${response.data.message}`,
