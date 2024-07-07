@@ -1,0 +1,29 @@
+{
+    "name": "toolbox",
+    "version": "1.0.0",
+    "description": "Challenge",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "lint": "npm run lint:backend",
+        "lint:backend": "cd api && npm run lint",
+        "lint:frontend": "cd client && npm run lint",
+        "lint:fix:backend": "cd api && npm run lint:fix",
+        "format:frontend": "cd client && npm run format",
+        "format:backend": "cd api && npm run format",
+        "format": "npm run format:backend"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/goitiarodrigo/tb.git"
+    },
+    "author": "Rodrigo Goitia",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/goitiarodrigo/tb/issues"
+    },
+    "homepage": "https://github.com/goitiarodrigo/tb#readme",
+    "devDependencies": {
+        "husky": "^7.0.4"
+    }
+}
