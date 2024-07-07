@@ -1,0 +1,5 @@
+.filenameTitle:hover {
+    text-decoration: underline;
+    transform: scale(102%);
+    transition: 200;
+}
