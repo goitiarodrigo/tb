@@ -1,6 +1,6 @@
 # Toolbox
 
-Challenge project for managing frontend and backend services.
+Challenge toolbox.
 
 ## Technologies Used / Tecnologías Usadas
 
@@ -9,9 +9,9 @@ Challenge project for managing frontend and backend services.
 - ![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=white)
 - ![Chai](https://img.shields.io/badge/Chai-A30701?logo=chai&logoColor=white)
 - ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)
+- ![Redux](https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white)
 - ![React-Bootstrap](https://img.shields.io/badge/React--Bootstrap-7952B3?logo=bootstrap&logoColor=white)
 - ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-- ![Redux](https://img.shields.io/badge/Redux-764ABC?logo=redux&logoColor=white)
 
 ## Language / Idioma
 
