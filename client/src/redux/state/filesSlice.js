@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-import Files from '../../services/files.service';
+import Files from '../../services/files.service.js';
 
 export const fetchValidsFiles = createAsyncThunk('files/data', async () => {
     const response = await Files.getValidsFiles();

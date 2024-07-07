@@ -1,4 +1,4 @@
-import TableData from './pages/TableData';
+import TableData from './pages/TableData.jsx';
 
 const App = () => {
     return (
