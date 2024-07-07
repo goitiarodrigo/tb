@@ -10,7 +10,7 @@
         "lint:fix:frontend": "cd client && npm run lint:fix",
         "format:frontend": "cd client && npm run format",
         "format:backend": "cd api && npm run format",
-        "lint": "npm run lint:backend && npm run lint:backend",
+        "lint": "npm run lint:frontend && npm run lint:backend",
         "lint:fix": "npm run lint:fix:backend && npm run lint:fix:frontend",
         "format": "npm run format:backend && npm run format:frontend"
     },

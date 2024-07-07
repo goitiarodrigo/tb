@@ -1,5 +1,4 @@
 import { Modal } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
 
 const BasicModal = ({ open, onClose, children }) => {
     return (
