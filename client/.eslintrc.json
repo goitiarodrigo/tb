@@ -1,0 +1,77 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "globals": {
+    "AudioWorkletGlobalScope": "readonly",
+    "myCustomGlobal": "readonly"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "import"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "react/react-in-jsx-scope": "off",
+    "import/order": ["error", {
+      "groups": ["builtin", "external", "internal"],
+      "newlines-between": "always"
+    }],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "react/prefer-stateless-function": "error",
+    "react/button-has-type": "error",
+    "react/no-unused-prop-types": "error",
+    "react/jsx-pascal-case": "error",
+    "react/jsx-no-script-url": "error",
+    "react/no-children-prop": "error",
+    "react/no-danger": "error",
+    "react/no-danger-with-children": "error",
+    "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+    "react/jsx-fragments": "error",
+    "react/destructuring-assignment": ["error", "always", { "destructureInSignature": "always" }],
+    "react/jsx-no-leaked-render": ["error", { "validStrategies": ["ternary"] }],
+    "react/jsx-max-depth": ["error", { "max": 5 }],
+    "react/function-component-definition": ["warn", { "namedComponents": "arrow-function" }],
+    "react/jsx-key": ["error", {
+      "checkFragmentShorthand": true,
+      "checkKeyMustBeforeSpread": true,
+      "warnOnDuplicates": true
+    }],
+    "react/jsx-no-useless-fragment": "warn",
+    "react/jsx-curly-brace-presence": "warn",
+    "react/no-typos": "warn",
+    "react/display-name": "warn",
+    "react/self-closing-comp": "warn",
+    "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": "off",
+    "import/newline-after-import": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/no-named-as-default-member": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

@@ -1,7 +1,6 @@
-import TableData from "./pages/TableData";
+import TableData from './pages/TableData';
 
-
-function App() {
+const App = () => {
     return (
         <div className="f-flex flex-column mb-3">
             <div className="w-100 p-2 mt-3 bg-danger">
@@ -10,6 +9,6 @@ function App() {
             <TableData />
         </div>
     );
-}
+};
 
 export default App;

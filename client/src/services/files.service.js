@@ -1,13 +1,13 @@
-import axiosInstance from "../api/axiosInstance";
+import axiosInstance from '../api/axiosInstance';
 
 class Files {
     async getValidsFiles() {
-        const response = await axiosInstance.axiosBase.get("files/data");
+        const response = await axiosInstance.axiosBase.get('files/data');
         return response.data.data;
     }
 
     async getFilesNames() {
-        const response = await axiosInstance.axiosBase.get("files/list");
+        const response = await axiosInstance.axiosBase.get('files/list');
         return response.data.data.data;
     }
 
@@ -17,4 +17,4 @@ class Files {
     }
 }
 
-export default new Files()
+export default new Files();

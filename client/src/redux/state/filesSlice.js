@@ -1,22 +1,22 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import Files from "../../services/files.service"
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
+import Files from '../../services/files.service';
 
 export const fetchValidsFiles = createAsyncThunk('files/data', async () => {
-    const response =  await Files.getValidsFiles()
-    
+    const response = await Files.getValidsFiles();
+
     return response;
-})
+});
 
 export const fetchFileData = createAsyncThunk('file/filename', async (fileName) => {
-    const response =  await Files.getFileData(fileName)
+    const response = await Files.getFileData(fileName);
     return response;
-})
+});
 
 export const fetchFilesNames = createAsyncThunk('files/list', async () => {
-    const response =  await Files.getFilesNames()
+    const response = await Files.getFilesNames();
     return response;
-})
+});
 
 const fileSlice = createSlice({
     name: 'files',
@@ -27,13 +27,13 @@ const fileSlice = createSlice({
         loadingValidsFiles: false,
         loadingFileData: false,
         loading: false,
-        error: null
+        error: null,
     },
     reducers: {
         setResetFileData: (state) => {
             state.fileData = undefined;
             state.loadingFileData = false;
-        }
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -69,9 +69,9 @@ const fileSlice = createSlice({
             .addCase(fetchFilesNames.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
-            })
+            });
     },
-})
+});
 
 export const { setResetFileData } = fileSlice.actions;
-export default fileSlice.reducer
+export default fileSlice.reducer;

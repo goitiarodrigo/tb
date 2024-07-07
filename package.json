@@ -3,15 +3,16 @@
     "version": "1.0.0",
     "description": "Challenge",
     "main": "index.js",
-    "type": "module",
     "scripts": {
-        "lint": "npm run lint:backend",
         "lint:backend": "cd api && npm run lint",
         "lint:frontend": "cd client && npm run lint",
         "lint:fix:backend": "cd api && npm run lint:fix",
+        "lint:fix:frontend": "cd client && npm run lint:fix",
         "format:frontend": "cd client && npm run format",
         "format:backend": "cd api && npm run format",
-        "format": "npm run format:backend"
+        "lint": "npm run lint:backend && npm run lint:backend",
+        "lint:fix": "npm run lint:fix:backend && npm run lint:fix:frontend",
+        "format": "npm run format:backend && npm run format:frontend"
     },
     "repository": {
         "type": "git",

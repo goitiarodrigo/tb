@@ -1,12 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import filesReducer from './state/filesSlice'
-import appReducer from './state/appSlice'
+import { configureStore } from '@reduxjs/toolkit';
+
+import filesReducer from './state/filesSlice';
+import appReducer from './state/appSlice';
 
 const store = configureStore({
     reducer: {
         app: appReducer,
-        files: filesReducer
-    }
-})
+        files: filesReducer,
+    },
+});
 
-export default store
+export default store;

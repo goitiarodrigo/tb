@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     open: false,
-}
+};
 
 const appSlice = createSlice({
     name: 'app',
@@ -10,9 +10,9 @@ const appSlice = createSlice({
     reducers: {
         setOpen: (state, action) => {
             state.open = action.payload;
-        }
-    }
-})
+        },
+    },
+});
 
 export const { setOpen } = appSlice.actions;
 export default appSlice.reducer;
