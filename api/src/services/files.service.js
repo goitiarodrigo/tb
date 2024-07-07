@@ -1,21 +1,11 @@
 import axios from 'axios';
 import { processCsv } from '../utils/csv.utils.js';
-import { EXTERNAL_BASE_URL, TOKEN } from '../../constants.js';
-
-const headers = {
-    headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${TOKEN}`,
-    },
-};
+import axiosInstance from '../api/axiosInstance.js';
 
 export const filesServices = {
     getFiles: async () => {
         try {
-            const response = await axios.get(
-                `${EXTERNAL_BASE_URL}/files`,
-                headers,
-            );
+            const response = await axiosInstance.axiosBase.get('/files');
             if (response.status === 200 && response.data.files) {
                 return response.data.files;
             } else {
@@ -30,10 +20,7 @@ export const filesServices = {
         try {
             const promises = files.map(async (file) => {
                 try {
-                    const response = await axios.get(
-                        `${EXTERNAL_BASE_URL}/file/${file}`,
-                        headers,
-                    );
+                    const response = await axiosInstance.axiosBase.get(`/file/${file}`);
                     if (response.status !== 200) {
                         throw new Error(
                             `Error to get file: ${response.data.message}`,

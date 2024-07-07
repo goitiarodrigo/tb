@@ -8,7 +8,6 @@
         "test": "mocha tests/**/*.test.js --timeout 10000",
         "start:dev": "nodemon src/index.js",
         "start": "node src/index.js",
-        "prepare": "husky install",
         "lint": "eslint ./src & eslint ./tests",
         "lint:fix": "eslint ./src --fix & eslint ./tests --fix",
         "format": "prettier --write ./src"
