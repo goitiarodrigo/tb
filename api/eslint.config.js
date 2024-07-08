@@ -8,13 +8,12 @@ export default [
                 ...globals.browser,
                 ...globals.node,
             },
-            ecmaVersion: 12,
-            sourceType: 'module',
         },
         plugins: {
             prettier: eslintPluginPrettier,
         },
         rules: {
+            "import/no-unresolved": "off",
             quotes: ['error', 'single'],
             semi: ['error', 'always'],
             indent: ['error', 4],

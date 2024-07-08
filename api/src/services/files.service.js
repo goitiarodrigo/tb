@@ -1,8 +1,8 @@
-import axios from 'axios';
 import { processCsv } from '../utils/csv.utils.js';
 import axiosInstance from '../api/axiosInstance.js';
 
 export const filesServices = {
+    // Send list of available files names
     getFiles: async () => {
         try {
             const response = await axiosInstance.axiosBase.get('/files');
@@ -15,7 +15,7 @@ export const filesServices = {
             throw new Error('Error to get file list: ', error.message);
         }
     },
-
+    // Receive list of files names and create an array with promises for
     processCsvFile: async (files) => {
         try {
             const promises = files.map(async (file) => {

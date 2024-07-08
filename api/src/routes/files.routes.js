@@ -1,7 +1,7 @@
-import { Router } from 'express';
+import express from 'express';
 import { filesControllers } from '../controllers/files.controller.js';
 
-const router = Router();
+const router = express.Router();
 
 router.route('/data').get(filesControllers.getAllFiles);
 

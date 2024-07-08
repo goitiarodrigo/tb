@@ -8,7 +8,7 @@ class Files {
 
     async getFilesNames() {
         const response = await axiosInstance.axiosBase.get('files/list');
-        return response.data.data.data;
+        return response.data.data;
     }
 
     async getFileData(fileName) {

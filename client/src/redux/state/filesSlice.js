@@ -23,51 +23,51 @@ const fileSlice = createSlice({
     initialState: {
         files: undefined,
         fileData: undefined,
+        filesSelected: undefined,
         filesNames: undefined,
-        loadingValidsFiles: false,
-        loadingFileData: false,
+        loadingFilesNames: false,
         loading: false,
         error: null,
     },
     reducers: {
         setResetFileData: (state) => {
-            state.fileData = undefined;
-            state.loadingFileData = false;
+            state.filesSelected = undefined;
+            state.loading = false;
         },
     },
     extraReducers: (builder) => {
         builder
             .addCase(fetchValidsFiles.pending, (state) => {
-                state.loadingValidsFiles = true;
+                state.loading = true;
             })
             .addCase(fetchValidsFiles.fulfilled, (state, action) => {
-                state.loadingValidsFiles = false;
-                state.files = action.payload;
+                state.loading = false;
+                state.filesSelected = action.payload;
             })
             .addCase(fetchValidsFiles.rejected, (state, action) => {
-                state.loadingValidsFiles = false;
+                state.loading = false;
                 state.error = action.error.message;
             })
             .addCase(fetchFileData.pending, (state) => {
-                state.loadingFileData = true;
+                state.loading = true;
             })
             .addCase(fetchFileData.fulfilled, (state, action) => {
-                state.loadingFileData = false;
-                state.fileData = action.payload;
+                state.loading = false;
+                state.filesSelected = action.payload;
             })
             .addCase(fetchFileData.rejected, (state, action) => {
-                state.loadingFileData = false;
+                state.loading = false;
                 state.error = action.error.message;
             })
             .addCase(fetchFilesNames.pending, (state) => {
-                state.loading = true;
+                state.loadingFilesNames = true;
             })
             .addCase(fetchFilesNames.fulfilled, (state, action) => {
-                state.loading = false;
+                state.loadingFilesNames = false;
                 state.filesNames = action.payload;
             })
             .addCase(fetchFilesNames.rejected, (state, action) => {
-                state.loading = false;
+                state.loadingFilesNames = false;
                 state.error = action.error.message;
             });
     },
