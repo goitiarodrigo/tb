@@ -30,12 +30,13 @@ Challenge toolbox.
 4. [Docker](#docker)
    1. [Docker backend](#docker-backend)
    2. [Docker frontend](#docker-frontend)
+5. [Swagger](#swagger)
 
-### Project Structure
+## Project Structure
 - **api**: Contains the backend code (Node.js with Express).
 - **client**: Contains the frontend code (React).
 
-### Getting Started
+## Getting Started
 
 1. Clone the repository:
 
@@ -44,7 +45,7 @@ Challenge toolbox.
     cd tb
     ```
 
-### Backend
+## Backend
 
 Make sure you have the following installed on your machine:
 
@@ -81,7 +82,7 @@ Start the backend server ``FROM API FOLDER``:
     npm test
     ```
 
-### Frontend
+## Frontend
 
 Make sure you have the following installed on your machine:
 
@@ -114,7 +115,7 @@ Start the frontend development server:
     npm run build
     ```
 
-### Scripts
+## Scripts
 
 ##### Linting and Formatting
 
@@ -140,7 +141,11 @@ npm run lint:fix
 npm run format
 ```
 
-### Docker
+## Swagger
+
+- To see the documentation in Swagger you can go to http://localhost:8080/api-docs/#/
+
+## Docker
 
 #### Building and Running with Docker
 
