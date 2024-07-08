@@ -13,42 +13,29 @@ Challenge toolbox.
 - ![React-Bootstrap](https://img.shields.io/badge/React--Bootstrap-7952B3?logo=bootstrap&logoColor=white)
 - ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 
-## Language / Idioma
-
-- [English](#english)
-- [Español](#español)
-
-## English
-
 ### Table of Contents
 
 1. [Project Structure](#project-structure)
 2. [Getting Started](#getting-started)
-    1. [Prerequisites](#prerequisites)
-    2. [Installation](#installation)
+3. [Backend](#backend)
+   1. [Installation Backend](#installation-b)
+   2. [Running backend](#running-backend)
+4. [Frontend](#frontend)
+    1. [Installation Frontend](#installation-f)
+    2. [Running frontend](#running-frontend)
 3. [Scripts](#scripts)
     1. [Linting and Formatting](#linting-and-formatting)
-    2. [Running the Backend](#running-the-backend)
-    3. [Running the Frontend](#running-the-frontend)
+    2. [Run Linting Backend](#run-linting-backend)
+    3. [Run Linting Frontend](#run-linting-frontend)
 4. [Docker](#docker)
+   1. [Docker backend](#docker-backend)
+   2. [Docker frontend](#docker-frontend)
 
 ### Project Structure
 - **api**: Contains the backend code (Node.js with Express).
 - **client**: Contains the frontend code (React).
 
 ### Getting Started
-
-#### Prerequisites
-
-Make sure you have the following installed on your machine:
-
-##### Backend
-- Node.js (v14)
-  
-##### Frontend
-- Node.js (v16)
-
-#### Installation
 
 1. Clone the repository:
 
@@ -57,64 +44,59 @@ Make sure you have the following installed on your machine:
     cd tb
     ```
 
-2. Install dependencies for both frontend and backend:
+### Backend
 
+Make sure you have the following installed on your machine:
+
+- Node.js (v14)
+
+#### Installation B
+
+-. Install dependencies for backend ``FROM TB FOLDER``:
+     
+- **Run install**:
     ```
-    npm install
     cd api && npm install
-    cd ../client && npm install
     ```
+    
+#### Running backend
 
-### Scripts
-
-#### Linting and Formatting
-
-Run linting and formatting scripts to ensure code quality and consistency.
-
-- **Run all linting scripts**:
-
-    ```
-    npm run lint
-    ```
-
-- **Run all lint fixing scripts**:
-
-    ```
-    npm run lint:fix
-    ```
-
-- **Run all formatting scripts**:
-
-    ```
-    npm run format
-    ```
-
-#### Running the Backend
-
-Start the backend server:
+Start the backend server ``FROM API FOLDER``:
 
 - **Development mode**:
 
     ```
-    cd api
     npm run start:dev
     ```
 
 - **Production mode**:
 
     ```
-    cd api
     npm start
     ```
 
 - **Run tests**:
 
     ```
-    cd api
     npm test
     ```
 
-#### Running the Frontend
+### Frontend
+
+Make sure you have the following installed on your machine:
+
+- Node.js (v16)
+
+#### Installation F
+
+-. Install dependencies for frontend ``FROM TB FOLDER``:
+     
+- **Run install**:
+    ```
+    cd client && npm install
+    ```
+
+#### Running Frontend
 
 Start the frontend development server:
 
@@ -132,13 +114,39 @@ Start the frontend development server:
     npm run build
     ```
 
+### Scripts
+
+##### Linting and Formatting
+
+Run linting and formatting scripts to ensure code quality and consistency:
+
+- **Run linting and formatting**:
+
+##### Run Linting Backend
+
+```
+cd api
+npm run lint
+npm run lint:fix
+npm run format
+```
+
+##### Run Linting Frontend
+
+```
+cd client
+npm run lint
+npm run lint:fix
+npm run format
+```
+
 ### Docker
 
 #### Building and Running with Docker
 
-##### Backend
+##### Docker Backend
 
-1. Build the Docker image for the backend:
+1. Build the Docker image for the backend ``FROM TB FOLDER``:
 
     ```
     cd api
@@ -151,9 +159,9 @@ Start the frontend development server:
     docker run -p 8080:8080 toolbox-backend
     ```
 
-##### Frontend
+##### Docker Frontend
 
-1. Build the Docker image for the frontend:
+1. Build the Docker image for the frontend ``FROM TB FOLDER``:
 
     ```
     cd client
@@ -168,152 +176,3 @@ Start the frontend development server:
 
 This section assumes that you have Docker installed on your machine. If you don't have Docker, you can download and install it from [here](https://www.docker.com/products/docker-desktop).
 
-## Español
-
-### Tabla de Contenidos
-
-1. [Estructura del Proyecto](#estructura-del-proyecto)
-2. [Comenzando](#comenzando)
-    1. [Prerrequisitos](#prerrequisitos)
-    2. [Instalación](#instalación)
-3. [Scripts](#scripts)
-    1. [Linting y Formateo](#linting-y-formateo)
-    2. [Ejecutando el Backend](#ejecutando-el-backend)
-    3. [Ejecutando el Frontend](#ejecutando-el-frontend)
-4. [Docker](#docker-1)
-
-### Estructura del Proyecto
-- **api**: Contiene el código del backend (Node.js con Express).
-- **client**: Contiene el código del frontend (React).
-
-### Comenzando
-
-#### Prerrequisitos
-
-Asegúrate de tener lo siguiente instalado en tu máquina:
-
-##### Backend
-- Node.js (v14)
-  
-##### Frontend
-- Node.js (v16)
-
-#### Instalación
-
-1. Clona el repositorio:
-
-    ```
-    git clone https://github.com/goitiarodrigo/tb.git
-    cd tb
-    ```
-
-2. Instala las dependencias para el frontend y el backend:
-
-    ```
-    npm install
-    cd api && npm install
-    cd ../client && npm install
-    ```
-
-### Scripts
-
-#### Linting y Formateo
-
-Ejecuta scripts de linting y formateo para asegurar la calidad y consistencia del código.
-
-- **Ejecutar todos los scripts de linting**:
-
-    ```
-    npm run lint
-    ```
-
-- **Ejecutar todos los scripts de corrección de linting**:
-
-    ```
-    npm run lint:fix
-    ```
-
-- **Ejecutar todos los scripts de formateo**:
-
-    ```
-    npm run format
-    ```
-
-#### Ejecutando el Backend
-
-Inicia el servidor del backend:
-
-- **Modo desarrollo**:
-
-    ```
-    cd api
-    npm run start:dev
-    ```
-
-- **Modo producción**:
-
-    ```
-    cd api
-    npm start
-    ```
-
-- **Ejecutar pruebas**:
-
-    ```
-    cd api
-    npm test
-    ```
-
-#### Ejecutando el Frontend
-
-Inicia el servidor de desarrollo del frontend:
-
-- **Modo desarrollo**:
-
-    ```
-    cd client
-    npm start
-    ```
-
-- **Construir para producción**:
-
-    ```
-    cd client
-    npm run build
-    ```
-
-### Docker
-
-#### Construyendo y Ejecutando con Docker
-
-##### Backend
-
-1. Construir la imagen de Docker para el backend:
-
-    ```
-    cd api
-    docker build -t toolbox-backend .
-    ```
-
-2. Ejecutar el contenedor de Docker para el backend:
-
-    ```
-    docker run -p 8080:8080 toolbox-backend
-    ```
-
-##### Frontend
-
-1. Construir la imagen de Docker para el frontend:
-
-    ```
-    cd client
-    docker build -t toolbox-frontend .
-    ```
-
-2. Ejecutar el contenedor de Docker para el frontend:
-
-    ```
-    docker run -p 3000:3000 toolbox-frontend
-    ```
-
-Esta sección asume que tienes Docker instalado en tu máquina. Si no tienes Docker, puedes descargarlo e instalarlo desde [aquí](https://www.docker.com/products/docker-desktop).
